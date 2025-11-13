@@ -1,0 +1,1023 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "backend_yourmycelebrity",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/ArtistProfiles": {
+      "get": {
+        "tags": [
+          "ArtistProfiles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ArtistProfiles"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistProfile"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistProfile"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistProfile"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ArtistProfiles/{id}": {
+      "get": {
+        "tags": [
+          "ArtistProfiles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ArtistProfiles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateArtistDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateArtistDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateArtistDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ArtistProfiles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/register": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Activity": {
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partnerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "activityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "appointmentDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "completionDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "updateAt": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "schedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Schedule"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ArtistProfile": {
+        "type": "object",
+        "properties": {
+          "artistId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "officialName": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "realName": {
+            "type": "string",
+            "nullable": true
+          },
+          "mbti": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodtype": {
+            "type": "string",
+            "nullable": true
+          },
+          "debutDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "picture": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nativeRealName": {
+            "type": "string",
+            "nullable": true
+          },
+          "heightCm": {
+            "type": "string",
+            "nullable": true
+          },
+          "weightKg": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "nativeOffcialName": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupMember"
+            },
+            "nullable": true
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            },
+            "nullable": true
+          },
+          "schedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Schedule"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GroupMember": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idolId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "debutDateInGroup": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "artistId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "artist": {
+            "$ref": "#/components/schemas/ArtistProfile"
+          },
+          "idol": {
+            "$ref": "#/components/schemas/IdolGroup"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdolGroup": {
+        "type": "object",
+        "properties": {
+          "idolGroupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "debutdate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "fandomName": {
+            "type": "string",
+            "nullable": true
+          },
+          "members": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "picture": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupNameKorean": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupNameJapanese": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupMember"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequestDto": {
+        "type": "object",
+        "properties": {
+          "usernameOrEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MakeupTeam": {
+        "type": "object",
+        "properties": {
+          "makeupteamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
+          },
+          "leadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "staffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lead": {
+            "$ref": "#/components/schemas/StaffProfile"
+          },
+          "schedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Schedule"
+            },
+            "nullable": true
+          },
+          "staff": {
+            "$ref": "#/components/schemas/StaffProfile"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "discount": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalBill": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "orderDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDetail"
+            },
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderDetail": {
+        "type": "object",
+        "properties": {
+          "orderdetailId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order"
+          },
+          "product": {
+            "$ref": "#/components/schemas/Product"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productName": {
+            "type": "string",
+            "nullable": true
+          },
+          "productArtist": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "productPicture": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDetail"
+            },
+            "nullable": true
+          },
+          "productArtistNavigation": {
+            "$ref": "#/components/schemas/ArtistProfile"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Schedule": {
+        "type": "object",
+        "properties": {
+          "exhibitLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "officialTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "descriptionForWork": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeupLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "descriptionForStaff": {
+            "type": "string",
+            "nullable": true
+          },
+          "artistId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "makeupTeamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "activityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isCompleted": {
+            "type": "boolean"
+          },
+          "scheduleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "activity": {
+            "$ref": "#/components/schemas/Activity"
+          },
+          "artist": {
+            "$ref": "#/components/schemas/ArtistProfile"
+          },
+          "makeupTeam": {
+            "$ref": "#/components/schemas/MakeupTeam"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StaffProfile": {
+        "type": "object",
+        "properties": {
+          "staffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responsibilities": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeupTeamLeads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MakeupTeam"
+            },
+            "nullable": true
+          },
+          "makeupTeamStaffs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MakeupTeam"
+            },
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateArtistDto": {
+        "type": "object",
+        "properties": {
+          "artistId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "officialName": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "realName": {
+            "type": "string",
+            "nullable": true
+          },
+          "mbti": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodtype": {
+            "type": "string",
+            "nullable": true
+          },
+          "debutDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "picture": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nativeRealName": {
+            "type": "string",
+            "nullable": true
+          },
+          "heightCm": {
+            "type": "string",
+            "nullable": true
+          },
+          "weightKg": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "nativeOffcialName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "profilePic": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "artistProfiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ArtistProfile"
+            },
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            },
+            "nullable": true
+          },
+          "staffProfiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StaffProfile"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

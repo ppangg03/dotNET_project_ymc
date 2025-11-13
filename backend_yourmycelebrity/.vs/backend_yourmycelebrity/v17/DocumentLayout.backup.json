@@ -1,0 +1,328 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\dto\\users\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:dto\\users\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\interface\\iartistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\interface\\iartistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\implementations\\artistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\implementations\\artistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\dto\\artistprofile\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:dto\\artistprofile\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\dto\\artistprofile\\updateartistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:dto\\artistprofile\\updateartistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\models\\artistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:models\\artistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\controllers\\artistprofilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:controllers\\artistprofilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\models\\staffprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:models\\staffprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 254,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T04:43:13.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IUserRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T05:35:34.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\Users\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Dto\\Users\\LoginRequestDto.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\Users\\LoginRequestDto.cs",
+              "RelativeToolTip": "Dto\\Users\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:51:16.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IGenericRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IGenericRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IGenericRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:11:03.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IArtistProfileRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IArtistProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IArtistProfileRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Interface\\IArtistProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IArtistProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T05:39:27.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ArtistProfilesController.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\ArtistProfilesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ArtistProfilesController.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\ArtistProfilesController.cs",
+              "RelativeToolTip": "Controllers\\ArtistProfilesController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAEBVwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T07:03:08.446Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 146,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "DependencyInjection.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\DependencyInjection.cs",
+              "RelativeToolTip": "DependencyInjection.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T06:46:48.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:19:31.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T11:22:07.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\UserRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T05:34:20.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\GenericRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAKCZwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:15:56.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ArtistProfileRepository.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\ArtistProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\ArtistProfileRepository.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\ArtistProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\ArtistProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:08:40.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T11:22:02.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T05:07:48.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdateArtistDto.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\UpdateArtistDto.cs",
+              "RelativeDocumentMoniker": "Dto\\ArtistProfile\\UpdateArtistDto.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\UpdateArtistDto.cs",
+              "RelativeToolTip": "Dto\\ArtistProfile\\UpdateArtistDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T13:43:01.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ArtistDto.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\ArtistDto.cs",
+              "RelativeDocumentMoniker": "Dto\\ArtistProfile\\ArtistDto.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\ArtistDto.cs",
+              "RelativeToolTip": "Dto\\ArtistProfile\\ArtistDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T07:47:45.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ArtistProfile.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\ArtistProfile.cs",
+              "RelativeDocumentMoniker": "Models\\ArtistProfile.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\ArtistProfile.cs",
+              "RelativeToolTip": "Models\\ArtistProfile.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAEBVwC4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:04:09.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StaffProfile.cs",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\StaffProfile.cs",
+              "RelativeDocumentMoniker": "Models\\StaffProfile.cs",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\StaffProfile.cs",
+              "RelativeToolTip": "Models\\StaffProfile.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:04:19.035Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
