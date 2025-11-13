@@ -81,7 +81,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 254,
+          "DockedWidth": 207,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -104,7 +104,7 @@
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T04:43:13.619Z",
               "EditorCaption": ""
@@ -172,7 +172,7 @@
           ]
         },
         {
-          "DockedWidth": 146,
+          "DockedWidth": 193,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -207,7 +207,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-08T11:22:07.185Z",
               "EditorCaption": ""
