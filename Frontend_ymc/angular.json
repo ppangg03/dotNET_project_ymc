@@ -10,10 +10,13 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
-        "build": {
-          "builder": "@angular/build:application",
+       "build": {
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "browser": "src/main.ts",
+           
+            "outputPath": "dist/frontend_ymc",
+            "index": "src/index.html",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -25,11 +28,19 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
             ]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -53,7 +64,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+      
+          "builder": "@angular-devkit/build-angular:dev-server",
+
           "configurations": {
             "production": {
               "buildTarget": "Frontend_ymc:build:production"
@@ -88,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d2a1ac18-b291-4d22-9b43-81f5da542fc8"
   }
 }
