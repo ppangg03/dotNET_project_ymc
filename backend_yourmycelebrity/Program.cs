@@ -21,6 +21,7 @@ builder.Services.AddControllers()
     });
 builder.Services.AddPersistence();
 builder.Services.AddJWTConfig();
+builder.Services.AddConfigurationService();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -51,15 +52,12 @@ else
     app.UseHsts();
 }
 
-
 app.UseHttpsRedirection();
 
-app.UseCors("EnableCORS");
 app.UseRouting();
+app.UseCors("EnableCORS");
 
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

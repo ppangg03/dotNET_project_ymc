@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\repositories\\implementations\\artistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:repositories\\implementations\\artistprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4A545C9-8494-4FEF-8B85-0A548B0222A3}|backend_yourmycelebrity.csproj|d:\\larnforlife\\.net_project_ymc\\backend_yourmycelebrity\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,7 +77,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 207,
+          "DockedWidth": 194,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -98,13 +94,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T04:43:13.619Z",
               "EditorCaption": ""
@@ -159,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "ArtistProfilesController.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Controllers\\ArtistProfilesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ArtistProfilesController.cs",
@@ -172,8 +168,8 @@
           ]
         },
         {
-          "DockedWidth": 193,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 206,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -183,33 +179,21 @@
               "RelativeDocumentMoniker": "DependencyInjection.cs",
               "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\DependencyInjection.cs",
               "RelativeToolTip": "DependencyInjection.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T06:46:48.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T09:19:31.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-08T11:22:07.185Z",
+              "WhenOpened": "2025-11-12T09:19:31.706Z",
               "EditorCaption": ""
             },
             {
@@ -238,6 +222,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T11:22:07.185Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "ArtistProfileRepository.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Repositories\\Implementations\\ArtistProfileRepository.cs",
@@ -251,18 +247,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-08T11:22:02.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -274,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "UpdateArtistDto.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\UpdateArtistDto.cs",
               "RelativeDocumentMoniker": "Dto\\ArtistProfile\\UpdateArtistDto.cs",
@@ -286,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ArtistDto.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Dto\\ArtistProfile\\ArtistDto.cs",
               "RelativeDocumentMoniker": "Dto\\ArtistProfile\\ArtistDto.cs",
@@ -298,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "ArtistProfile.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\ArtistProfile.cs",
               "RelativeDocumentMoniker": "Models\\ArtistProfile.cs",
@@ -310,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "StaffProfile.cs",
               "DocumentMoniker": "D:\\LarnForLife\\.NET_project_ymc\\backend_yourmycelebrity\\Models\\StaffProfile.cs",
               "RelativeDocumentMoniker": "Models\\StaffProfile.cs",

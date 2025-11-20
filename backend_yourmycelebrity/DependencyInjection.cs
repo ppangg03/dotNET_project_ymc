@@ -46,9 +46,10 @@ namespace backend_yourmycelebrity
             {
                 options.AddPolicy("EnableCORS", builder =>
                 {
-                    builder.AllowAnyOrigin()
+                    builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
                         .AllowAnyMethod()
-                        .AllowAnyHeader();
+                        .AllowCredentials();
                 });
             });
             return services;
