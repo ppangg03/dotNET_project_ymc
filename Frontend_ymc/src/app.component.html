@@ -1,14 +1,11 @@
-<!doctype html>
-<html lang="en">
+<div class="d-flex flex-column min-vh-100">
+  <app-navbar></app-navbar>
 
-<head>
-  <meta charset="utf-8">
-  <title>YMC</title>
-  <base href="/">
-</head>
+  <main class="flex-grow-1">
+     <div class="container my-4">
+      <router-outlet></router-outlet>
+     </div>
+  </main>
 
-<body>
-  <router-outlet></router-outlet>
-</body>
-
-</html>
+  <app-footer></app-footer>
+</div>

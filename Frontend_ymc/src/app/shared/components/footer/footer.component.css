@@ -1,0 +1,22 @@
+/* styles.css (global) */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px; /* สำหรับ navbar fixed */
+}
+
+.main-content {
+  flex: 1 0 auto; /* ให้เนื้อหาขยายเต็มพื้นที่ */
+  padding: 20px 0;
+  min-height: calc(100vh - 56px - 60px); /* 100vh - navbar - footer */
+}
+
+footer {
+  flex-shrink: 0; /* ไม่ให้ footer หด */
+  margin-top: auto; /* ผลัก footer ไปด้านล่าง */
+}
