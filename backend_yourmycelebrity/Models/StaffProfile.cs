@@ -13,8 +13,14 @@ public partial class StaffProfile
     [Column("staff_id")]
     public int StaffId { get; set; }
 
+    /// <summary>
+    /// ช่างผม หรือช่างแต่งหน้า หรือ สไตลิส
+    /// </summary>
     [Column("responsibilities", TypeName = "character varying")]
     public string? Responsibilities { get; set; }
+
+    [Column("user_id")]
+    public int UserId { get; set; }
 
     [Column("department", TypeName = "character varying")]
     public string? Department { get; set; }
@@ -25,10 +31,7 @@ public partial class StaffProfile
     [InverseProperty("Staff")]
     public virtual ICollection<MakeupTeam> MakeupTeamStaffs { get; set; } = new List<MakeupTeam>();
 
-    [Column("user_id")]
-    public int? UserId { get; set; }
-
     [ForeignKey("UserId")]
     [InverseProperty("StaffProfiles")]
-    public virtual User? User { get; set; }
+    public virtual User User { get; set; } = null!;
 }

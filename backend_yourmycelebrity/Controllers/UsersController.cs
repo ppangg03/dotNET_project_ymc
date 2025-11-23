@@ -1,7 +1,9 @@
 ﻿using backend_yourmycelebrity.Dto.Users;
 using backend_yourmycelebrity.Models;
 using backend_yourmycelebrity.Repositories.Interface;
+using backend_yourmycelebrity.Services.UserService;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -20,76 +22,85 @@ namespace backend_yourmycelebrity.Controllers
         private readonly IGenericRepository<User> _repository;
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly IJwtService _jwtService;
 
-        public UsersController(IGenericRepository<User> repository,IUserRepository userRepository, IConfiguration configuration)
+        public UsersController(IGenericRepository<User> repository,
+            IUserRepository userRepository, 
+            IConfiguration configuration,
+             IJwtService jwtService
+            )
         {
             _repository = repository;
             _userRepository = userRepository;
             _configuration = configuration;
+            _jwtService = jwtService;
         }
 
-        [HttpPost]
-        [Route("login")]
+        [HttpPost("login")]
         public async Task<IActionResult> login([FromBody] LoginRequestDto loginRequest)
         {
             if (loginRequest == null || string.IsNullOrEmpty(loginRequest.UsernameOrEmail))
             {
                 return BadRequest("Invalid client request");
             }
-            
-            var findUser = await _userRepository.GetUserByUsernameOrEmailAsync(
-                    loginRequest.UsernameOrEmail,loginRequest.Password);
+            var findUser = await _userRepository.GetUserByUsernameOrEmailAsync(loginRequest.UsernameOrEmail);
 
-            if (findUser != null)
+            if(findUser == null)
             {
-                var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"] ?? "A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6"));
-                var signingCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
-
-                var claims = new List<Claim>
-                {
-                new Claim(ClaimTypes.NameIdentifier, findUser.UserId.ToString()),
-                new Claim(ClaimTypes.Name, findUser.Username),
-                new Claim(ClaimTypes.Email, findUser.Email)
-                };
-
-                var tokenOptions = new JwtSecurityToken(
-                    issuer: _configuration["Jwt:Issuer"] ?? "https://localhost:7008",
-                    audience: _configuration["Jwt:Audience"] ?? "https://localhost:7008",
-                    claims: claims,
-                    expires: DateTime.UtcNow.AddMinutes(30),
-                    signingCredentials: signingCredentials
-                    );
-
-                var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
-                return Ok(new 
-                {
-                    Token = tokenString,
-                    Username = findUser.Username,
-                    Email = findUser.Email,
-                    ExpiresAt = tokenOptions.ValidTo
-                });
+                return BadRequest("This Username Or Email not Account!");
             }
-            return Unauthorized(new { Message = "Invalid username or password" });
 
+            if (!BCrypt.Net.BCrypt.Verify(
+                loginRequest.Password,
+                findUser.PasswordHash
+            ))
+            {
+                return Unauthorized(new { message = "Invalid credentials" });
+            }
+
+            var token = _jwtService.GenerateToken(findUser);
+
+            return Ok(new
+            {
+                Token = token,
+                Username = findUser.Username,
+                Email = findUser.Email,
+                ExpiresAt = DateTime.UtcNow.AddMinutes(
+            int.Parse(_configuration["Jwt:ExpireMinutes"] ?? "30"))
+            });
         }
 
-        [HttpGet]
-        [Route("register")]
-        public async Task<IActionResult> Register([FromBody] User user)
+        [HttpPost("register")]
+        //[Route("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterRequestDto request)
         {
-            if (user == null || string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
+            if (request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
             {
                 return BadRequest("Invalid user data");
             }
 
-            var existingUser = await _userRepository.GetUserByUsernameAsync(user.Username);
-            if (existingUser != null)
+            if (await _userRepository.GetUserByEmailAsync(request.Email) != null)
             {
-                return BadRequest("Username already exists");
+                return BadRequest("Email already exists!");
+            }
+            else if (await _userRepository.GetUserByUsernameAsync(request.Username) != null)
+            {
+                return BadRequest("Username already exists!");
             }
 
-            //user.CreatedAt = DateTime.UtcNow;
-            var newUser = await _repository.Add(user);
+            var plainPassword = request.Password;
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(plainPassword);
+
+            var newUser = new User
+            {
+                Username = request.Username,
+                Email = request.Email,
+                PasswordHash = passwordHash,
+                CreatedAt = request.createdAt,
+                Role = "customer"   //set default customer
+            };
+
+            var user = await _repository.Add(newUser);
 
             return Ok(new { Message = "User registered successfully", UserId = newUser.UserId });
         }
@@ -100,7 +111,7 @@ namespace backend_yourmycelebrity.Controllers
         {
             var users = await _repository.GetAllWithInclude(a => a.ArtistProfiles);
             return Ok(users);
-            
+
         }
 
         //GET: api/User/1
@@ -115,13 +126,13 @@ namespace backend_yourmycelebrity.Controllers
         [HttpPost]
         public async Task<IActionResult> PostUser(User user)
         {
-            if ( user == null)
+            if (user == null)
             {
                 return BadRequest();
             }
             try
             {
-               return Ok(await _repository.Add(user));
+                return Ok(await _repository.Add(user));
             }
             catch (Exception ex)
             {
@@ -130,7 +141,7 @@ namespace backend_yourmycelebrity.Controllers
         }
         //PUT
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id,User user)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
             if (user == null || id != user.UserId)
             {
@@ -138,7 +149,7 @@ namespace backend_yourmycelebrity.Controllers
             }
             try
             {
-                return Ok(await _repository.Update(id,user));
+                return Ok(await _repository.Update(id, user));
             }
             catch (ArgumentException ex)
             {
@@ -153,7 +164,7 @@ namespace backend_yourmycelebrity.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            if(!await _repository.Delete(id))
+            if (!await _repository.Delete(id))
             {
                 return BadRequest();
             }

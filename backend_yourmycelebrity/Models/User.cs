@@ -10,12 +10,16 @@ namespace backend_yourmycelebrity.Models;
 public partial class User
 {
     [Column("username", TypeName = "character varying")]
+    [Required]
+    [RegularExpression(@"^[a-zA-Z0-9_]+$")]
     public string? Username { get; set; }
 
-    [Column("password", TypeName = "character varying")]
-    public string? Password { get; set; }
+    [Column("passwordHash", TypeName = "character varying")]
+    [Required]
+    public string? PasswordHash { get; set; }
 
     [Column("email", TypeName = "character varying")]
+    [Required]
     public string? Email { get; set; }
 
     [Column("role", TypeName = "character varying")]

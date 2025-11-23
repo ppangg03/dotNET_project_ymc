@@ -162,7 +162,7 @@
       }
     },
     "/api/Users/register": {
-      "get": {
+      "post": {
         "tags": [
           "Users"
         ],
@@ -170,17 +170,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequestDto"
               }
             }
           }
@@ -755,6 +755,28 @@
         },
         "additionalProperties": false
       },
+      "RegisterRequestDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
       "Schedule": {
         "type": "object",
         "properties": {
@@ -821,6 +843,10 @@
             "type": "string",
             "nullable": true
           },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "department": {
             "type": "string",
             "nullable": true
@@ -837,11 +863,6 @@
             "items": {
               "$ref": "#/components/schemas/MakeupTeam"
             },
-            "nullable": true
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32",
             "nullable": true
           },
           "user": {
@@ -919,19 +940,25 @@
         "additionalProperties": false
       },
       "User": {
+        "required": [
+          "email",
+          "passwordHash",
+          "username"
+        ],
         "type": "object",
         "properties": {
           "username": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_]+$",
+            "type": "string"
           },
-          "password": {
-            "type": "string",
-            "nullable": true
+          "passwordHash": {
+            "minLength": 1,
+            "type": "string"
           },
           "email": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "role": {
             "type": "string",

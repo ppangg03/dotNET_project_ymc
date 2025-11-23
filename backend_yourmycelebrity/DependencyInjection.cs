@@ -1,5 +1,6 @@
 ﻿using backend_yourmycelebrity.Repositories.Implementations;
 using backend_yourmycelebrity.Repositories.Interface;
+using backend_yourmycelebrity.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -16,6 +17,7 @@ namespace backend_yourmycelebrity
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped(typeof(IArtistProfileRepository), typeof(ArtistProfileRepository));
             services.AddScoped(typeof(IUserRepository),typeof( UserRepository));
+            services.AddScoped(typeof(IJwtService), typeof( JwtService ));
             return services;
         }
         public static IServiceCollection AddJWTConfig(this IServiceCollection services)

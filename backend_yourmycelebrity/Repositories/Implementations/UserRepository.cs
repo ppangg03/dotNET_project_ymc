@@ -14,15 +14,23 @@ namespace backend_yourmycelebrity.Repositories.Implementations
         {
             _context = context;
         }
-        public async Task<User?> GetUserByUsernameOrEmailAsync(string usernameOrEmail, string password)
+        public async Task<User?> GetUserByEmailAsync(string email )
         {
-             return await _context.Users.FirstOrDefaultAsync(u =>
-                (u.Username == usernameOrEmail || u.Email == usernameOrEmail)
-                && u.Password == password);
+             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
             return await _context.Users.FirstOrDefaultAsync(a => a.Username == username);
+        }
+        public async Task<User?> GetUserByUsernameOrEmailAsync(string usernameOrEmail)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == usernameOrEmail || u.Email == usernameOrEmail);
+        }
+        public async Task<User?> GetUserByUsernameOrPasswordAsync(string usernameOrEmail,string passwordHash)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => 
+            (u.Username == usernameOrEmail || u.Email == usernameOrEmail)
+            && u.PasswordHash == passwordHash);
         }
     }
 }

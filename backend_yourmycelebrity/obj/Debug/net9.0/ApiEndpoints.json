@@ -177,13 +177,13 @@
     "ContainingType": "backend_yourmycelebrity.Controllers.UsersController",
     "Method": "Register",
     "RelativePath": "api/Users/register",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "backend_yourmycelebrity.Models.User",
+        "Name": "request",
+        "Type": "backend_yourmycelebrity.Dto.Users.RegisterRequestDto",
         "IsRequired": true
       }
     ],
