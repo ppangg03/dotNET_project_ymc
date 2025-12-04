@@ -1,7 +1,7 @@
-﻿using backend_yourmycelebrity.Dto.Users;
+﻿
 using backend_yourmycelebrity.Models;
 using backend_yourmycelebrity.Repositories.Interface;
-using backend_yourmycelebrity.Services.UserService;
+using backend_yourmycelebrity.Services.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
@@ -20,89 +20,20 @@ namespace backend_yourmycelebrity.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IGenericRepository<User> _repository;
-        private readonly IUserRepository _userRepository;
+        private readonly IAuthRepository _authRepository;
         private readonly IConfiguration _configuration;
         private readonly IJwtService _jwtService;
 
         public UsersController(IGenericRepository<User> repository,
-            IUserRepository userRepository, 
+            IAuthRepository authRepository, 
             IConfiguration configuration,
              IJwtService jwtService
             )
         {
             _repository = repository;
-            _userRepository = userRepository;
+            _authRepository = authRepository;
             _configuration = configuration;
             _jwtService = jwtService;
-        }
-
-        [HttpPost("login")]
-        public async Task<IActionResult> login([FromBody] LoginRequestDto loginRequest)
-        {
-            if (loginRequest == null || string.IsNullOrEmpty(loginRequest.UsernameOrEmail))
-            {
-                return BadRequest("Invalid client request");
-            }
-            var findUser = await _userRepository.GetUserByUsernameOrEmailAsync(loginRequest.UsernameOrEmail);
-
-            if(findUser == null)
-            {
-                return BadRequest("This Username Or Email not Account!");
-            }
-
-            if (!BCrypt.Net.BCrypt.Verify(
-                loginRequest.Password,
-                findUser.PasswordHash
-            ))
-            {
-                return Unauthorized(new { message = "Invalid credentials" });
-            }
-
-            var token = _jwtService.GenerateToken(findUser);
-
-            return Ok(new
-            {
-                Token = token,
-                Username = findUser.Username,
-                Email = findUser.Email,
-                ExpiresAt = DateTime.UtcNow.AddMinutes(
-            int.Parse(_configuration["Jwt:ExpireMinutes"] ?? "30"))
-            });
-        }
-
-        [HttpPost("register")]
-        //[Route("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequestDto request)
-        {
-            if (request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
-            {
-                return BadRequest("Invalid user data");
-            }
-
-            if (await _userRepository.GetUserByEmailAsync(request.Email) != null)
-            {
-                return BadRequest("Email already exists!");
-            }
-            else if (await _userRepository.GetUserByUsernameAsync(request.Username) != null)
-            {
-                return BadRequest("Username already exists!");
-            }
-
-            var plainPassword = request.Password;
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword(plainPassword);
-
-            var newUser = new User
-            {
-                Username = request.Username,
-                Email = request.Email,
-                PasswordHash = passwordHash,
-                CreatedAt = request.createdAt,
-                Role = "customer"   //set default customer
-            };
-
-            var user = await _repository.Add(newUser);
-
-            return Ok(new { Message = "User registered successfully", UserId = newUser.UserId });
         }
 
         //GET: api/Users

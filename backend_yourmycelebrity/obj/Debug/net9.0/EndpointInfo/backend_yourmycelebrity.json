@@ -130,10 +130,10 @@
         }
       }
     },
-    "/api/Users/login": {
+    "/api/Auth/login": {
       "post": {
         "tags": [
-          "Users"
+          "Auth"
         ],
         "requestBody": {
           "content": {
@@ -161,10 +161,22 @@
         }
       }
     },
-    "/api/Users/register": {
+    "/api/Auth/logout": {
       "post": {
         "tags": [
-          "Users"
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
         ],
         "requestBody": {
           "content": {
@@ -181,6 +193,99 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/RegisterRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/password-reset/send-otp": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOtpRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOtpRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOtpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/password-reset/verify-otp": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPasswordResetOtpRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPasswordResetOtpRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPasswordResetOtpRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/password-reset/reset": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordRequest"
               }
             }
           }
@@ -756,23 +861,68 @@
         "additionalProperties": false
       },
       "RegisterRequestDto": {
+        "required": [
+          "email",
+          "otp",
+          "password",
+          "username"
+        ],
         "type": "object",
         "properties": {
           "username": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z0-9_]+$",
+            "type": "string"
           },
           "password": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 8,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$",
+            "type": "string"
           },
           "email": {
+            "maxLength": 100,
+            "minLength": 0,
             "type": "string",
-            "nullable": true
+            "format": "email"
+          },
+          "otp": {
+            "maxLength": 6,
+            "minLength": 6,
+            "pattern": "^\\d{6}$",
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
             "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetPasswordRequest": {
+        "required": [
+          "email",
+          "newPassword",
+          "otp"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "otp": {
+            "maxLength": 6,
+            "minLength": 6,
+            "type": "string"
+          },
+          "newPassword": {
+            "maxLength": 100,
+            "minLength": 8,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -832,6 +982,78 @@
         },
         "additionalProperties": false
       },
+      "SecurityToken": {
+        "required": [
+          "token"
+        ],
+        "type": "object",
+        "properties": {
+          "tokenId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isUsed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isVerified": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tokenType": {
+            "$ref": "#/components/schemas/TokenType"
+          },
+          "purpose": {
+            "$ref": "#/components/schemas/TokenPurpose"
+          },
+          "blacklistedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendOtpRequest": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
       "StaffProfile": {
         "type": "object",
         "properties": {
@@ -870,6 +1092,26 @@
           }
         },
         "additionalProperties": false
+      },
+      "TokenPurpose": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "TokenType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "UpdateArtistDto": {
         "type": "object",
@@ -1012,12 +1254,40 @@
             },
             "nullable": true
           },
+          "securityTokens": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecurityToken"
+            },
+            "nullable": true
+          },
           "staffProfiles": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/StaffProfile"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifyPasswordResetOtpRequest": {
+        "required": [
+          "email",
+          "otp"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "otp": {
+            "maxLength": 6,
+            "minLength": 6,
+            "pattern": "^\\d{6}$",
+            "type": "string"
           }
         },
         "additionalProperties": false

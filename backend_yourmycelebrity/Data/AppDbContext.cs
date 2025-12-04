@@ -38,12 +38,16 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Schedule> Schedules { get; set; }
 
+    public virtual DbSet<SecurityToken> SecurityTokens { get; set; }
+
     public virtual DbSet<StaffProfile> StaffProfiles { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Name=DefaultConnection");
+    {
+        optionsBuilder.UseNpgsql("Name=DefaultConnection");
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -171,6 +175,19 @@ public partial class AppDbContext : DbContext
             entity.HasOne(d => d.MakeupTeam).WithMany(p => p.Schedules)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("schedule_makeup_team_fk");
+        });
+
+        modelBuilder.Entity<SecurityToken>(entity =>
+        {
+            entity.HasKey(e => e.TokenId).HasName("otp_code_pk");
+
+            entity.Property(e => e.TokenId).UseIdentityAlwaysColumn();
+            entity.Property(e => e.IsUsed).HasDefaultValue(false);
+            entity.Property(e => e.IsVerified).HasDefaultValue(false);
+            entity.Property(e => e.Purpose).HasComment("Purpose: Register, PasswordReset, Logout, etc.");
+            entity.Property(e => e.TokenType).HasComment("Type: OTP, PasswordReset, Blacklist");
+
+            entity.HasOne(d => d.User).WithMany(p => p.SecurityTokens).HasConstraintName("otp_code_users_fk");
         });
 
         modelBuilder.Entity<StaffProfile>(entity =>

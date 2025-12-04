@@ -79,6 +79,96 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "backend_yourmycelebrity.DTOs.Auth.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/password-reset/reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "backend_yourmycelebrity.Dto.Otp.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "SendPasswordResetOtp",
+    "RelativePath": "api/Auth/password-reset/send-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "backend_yourmycelebrity.Dto.Otp.SendOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "VerifyPasswordResetOtp",
+    "RelativePath": "api/Auth/password-reset/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "backend_yourmycelebrity.Dto.Otp.VerifyPasswordResetOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_yourmycelebrity.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "backend_yourmycelebrity.DTOs.Auth.RegisterRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backend_yourmycelebrity.Controllers.UsersController",
     "Method": "GetUsers",
     "RelativePath": "api/Users",
@@ -152,38 +242,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "backend_yourmycelebrity.Controllers.UsersController",
-    "Method": "login",
-    "RelativePath": "api/Users/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginRequest",
-        "Type": "backend_yourmycelebrity.Dto.Users.LoginRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "backend_yourmycelebrity.Controllers.UsersController",
-    "Method": "Register",
-    "RelativePath": "api/Users/register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "backend_yourmycelebrity.Dto.Users.RegisterRequestDto",
         "IsRequired": true
       }
     ],

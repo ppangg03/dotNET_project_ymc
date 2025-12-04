@@ -57,5 +57,8 @@ public partial class User
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
     [InverseProperty("User")]
+    public virtual ICollection<SecurityToken> SecurityTokens { get; set; } = new List<SecurityToken>();
+
+    [InverseProperty("User")]
     public virtual ICollection<StaffProfile> StaffProfiles { get; set; } = new List<StaffProfile>();
 }

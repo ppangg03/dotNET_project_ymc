@@ -1,13 +1,16 @@
 using backend_yourmycelebrity;
 using backend_yourmycelebrity.Data;
+using backend_yourmycelebrity.Middleware;
+using backend_yourmycelebrity.Services.AuthService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.Json.Serialization;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 
-
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,10 +27,17 @@ builder.Services.AddJWTConfig();
 builder.Services.AddConfigurationService();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+       
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
+builder.Services.AddHostedService<TokenCleanupService>();
 builder.Services.AddOpenApi();
+
 
 
 var app = builder.Build();
@@ -56,7 +66,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 app.UseCors("EnableCORS");
-
+app.UseMiddleware<TokenBlacklistMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

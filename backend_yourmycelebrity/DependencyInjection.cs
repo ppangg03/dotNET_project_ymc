@@ -1,7 +1,10 @@
-﻿using backend_yourmycelebrity.Repositories.Implementations;
+﻿using backend_yourmycelebrity.Data;
+using backend_yourmycelebrity.Repositories.Implementations;
 using backend_yourmycelebrity.Repositories.Interface;
+using backend_yourmycelebrity.Services.Interface;
 using backend_yourmycelebrity.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -14,10 +17,15 @@ namespace backend_yourmycelebrity
         //private readonly IServiceCollection 
         public static IServiceCollection AddPersistence(this IServiceCollection services) 
         {
+            //Repositories
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped(typeof(IArtistProfileRepository), typeof(ArtistProfileRepository));
-            services.AddScoped(typeof(IUserRepository),typeof( UserRepository));
+            services.AddScoped(typeof(IAuthRepository),typeof( AuthRepository));
+
+
+            //Services
             services.AddScoped(typeof(IJwtService), typeof( JwtService ));
+            services.AddScoped(typeof(IEmailService), typeof(EmailService));
             return services;
         }
         public static IServiceCollection AddJWTConfig(this IServiceCollection services)
@@ -56,5 +64,7 @@ namespace backend_yourmycelebrity
             });
             return services;
         }
+
+        
     }
 }

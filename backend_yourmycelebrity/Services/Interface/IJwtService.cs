@@ -1,7 +1,7 @@
-﻿using backend_yourmycelebrity.Dto.Users;
+﻿
 using backend_yourmycelebrity.Models;
 
-namespace backend_yourmycelebrity.Services.UserService
+namespace backend_yourmycelebrity.Services.Interface
 {
     public interface IJwtService
     {

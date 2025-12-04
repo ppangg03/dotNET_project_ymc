@@ -104,6 +104,11 @@ namespace backend_yourmycelebrity.Repositories.Implementations
         {
             return await _context.Set<T>().FirstOrDefaultAsync(predicate);
         }
+        //public async Task Save(Object object)
+        //{
+
+        //    await _context.SaveChangesAsync();
+        //}
         //private bool TodoItemExists(int id)
         //{
         //    return _context.Set<T>.Any(e => e.Id == id);

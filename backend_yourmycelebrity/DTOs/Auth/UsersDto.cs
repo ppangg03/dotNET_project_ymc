@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace backend_yourmycelebrity.Dto.Users
+namespace backend_yourmycelebrity.DTOs.Auth
 {
     public class UsersDto
     {
