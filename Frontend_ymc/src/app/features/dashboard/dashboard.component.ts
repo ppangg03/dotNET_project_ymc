@@ -3,7 +3,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { AuthService } from '../../core/services/auth.service';
 import { UserService } from '../../core/services/user.service';
 import { User } from '../../core/models/user.model';
-import { LoginResponse } from '../../core/models/login.model';
+import { LoginResponse } from '../../core/models/auth.model';
 import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
 
 @Component({
@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   currentUser: LoginResponse | null = null;
   users: User[] = [];
   isLoading: boolean = true;
+  username: string ='';
   
   private destroy$ = new Subject<void>();
 
@@ -59,7 +60,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       });
   }
 
-  logout(): void {
+  onLogout(): void {
     this.authService.logout();
   }
 

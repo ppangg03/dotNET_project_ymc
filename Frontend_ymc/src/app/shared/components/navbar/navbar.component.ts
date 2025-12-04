@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../../../core/services/auth.service';
-import { LoginResponse } from '../../../core/models/login.model';
-import { Router } from '@angular/router';
+import { LoginResponse } from '../../../core/models/auth.model';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
  
@@ -14,16 +17,30 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   isAuthenticated$!: Observable<boolean>;
   currentUser$!: Observable<LoginResponse | null>;
+  isLoggedIn = false;
+  username: string = '';
 
   constructor(
     private authService: AuthService,
     private router: Router
   ){
+    this.authService.isAuthenticated$.subscribe(
+      isAuth => this.isLoggedIn = isAuth);
     console.log('NavbarComponent constructor called');
   }
 
   ngOnInit(): void {
-    this.isAuthenticated$ = this.authService.isAuthenticated$;
+    this.authService.isAuthenticated$.subscribe(
+      (isAuth) => {
+        this.isLoggedIn = isAuth;
+        if (isAuth) {
+          const user = this.authService.getCurrentUser();
+          this.username = user?.unique_name || user?.username || user?.email || 'User';
+        } else {
+          this.username = '';
+        }
+      }
+    );
     this.currentUser$ = this.authService.currentUser$;
 
     //navbar toggler
@@ -54,7 +71,43 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  logout(): void {
-    this.authService.logout();
+  onLogout(): void {
+    if (confirm('Are you sure you want to logout?')) {
+      this.authService.logout();
+    }
   }
+
+   // LogOut With API
+  async onLogoutWithApi(): Promise<void> {
+    if (confirm('Are you sure you want to logout?')) {
+      await this.authService.logoutComplete();
+    }
+  }
+
+  onLogoutWithConfirmation(): void {
+    Swal.fire({
+      title: 'Logout',
+      text: 'Are you sure you want to logout?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#dc3545',
+      cancelButtonColor: '#6c757d',
+      confirmButtonText: 'Yes, logout',
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.authService.logout();
+        
+        Swal.fire({
+          title: 'Logged Out!',
+          text: 'You have been logged out successfully.',
+          icon: 'success',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      }
+    });
+  }
+
+
 }

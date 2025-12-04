@@ -128,3 +128,16 @@ main {
 .dropdown-item:hover {
   background-color: #f8f9fa;
 }
+
+.logout-item {
+  color: #dc3545 !important;
+}
+
+.logout-item:hover {
+  background-color: #fff5f5 !important;
+  color: #c82333 !important;
+}
+
+.logout-item i {
+  margin-right: 8px;
+}
